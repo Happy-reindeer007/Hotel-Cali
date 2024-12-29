@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://db68y10g0ekti"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_5g62w"]
-[ext_resource type="Texture2D" uid="uid://b1712smywenod" path="res://Assets/Assets/Images/Scenes/Corridor.png" id="2_nhhsc"]
+[ext_resource type="Texture2D" uid="uid://b1712smywenod" path="res://Assets/Images/Scenes/Corridor.png" id="2_nhhsc"]
 [ext_resource type="PackedScene" uid="uid://cecw46f0sk66n" path="res://Scenes/Player.tscn" id="3_gj2nk"]
 
 [node name="Main" type="Node2D"]

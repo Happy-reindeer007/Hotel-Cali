@@ -13,7 +13,7 @@ config_version=5
 config/name="Hotel Cali"
 run/main_scene="res://Scenes/Main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-boot_splash/image="res://Assets/Assets/Images/Scenes/1stScene/GameCover.png"
+boot_splash/image="res://Assets/Images/Scenes/1stScene/GameCover.png"
 config/icon="res://icon.svg"
 
 [display]
