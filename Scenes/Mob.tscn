@@ -1,0 +1,87 @@
+[gd_scene load_steps=16 format=3 uid="uid://6eor1nf8pj63"]
+
+[ext_resource type="Texture2D" uid="uid://brlmydo4ywxan" path="res://Assets/Assets/Images/Sprites/Blob/Blob1.png" id="1_bl0y7"]
+[ext_resource type="Texture2D" uid="uid://ldb545k2dpns" path="res://Assets/Assets/Images/Sprites/Blob/Blob2.png" id="2_3upu4"]
+[ext_resource type="Texture2D" uid="uid://ut71gi1x7w8e" path="res://Assets/Assets/Images/Sprites/Blob/Blob3.png" id="3_aph1j"]
+[ext_resource type="Texture2D" uid="uid://bqnlvh5rusq5x" path="res://Assets/Assets/Images/Sprites/Blob/Blob4.png" id="4_w8dj6"]
+[ext_resource type="Texture2D" uid="uid://c4vpau4wdul26" path="res://Assets/Assets/Images/Sprites/Blob/Blob5.png" id="5_d6nmj"]
+[ext_resource type="Texture2D" uid="uid://drmsoftmwcttg" path="res://Assets/Assets/Images/Sprites/Blob/Blob6.png" id="6_bqfi5"]
+[ext_resource type="Texture2D" uid="uid://cij07jrpg3vrh" path="res://Assets/Assets/Images/Sprites/Blob/Blob7.png" id="7_onelq"]
+[ext_resource type="Texture2D" uid="uid://bsweq850db6xq" path="res://Assets/Assets/Images/Sprites/Demon/Demon1.png" id="8_86yvd"]
+[ext_resource type="Texture2D" uid="uid://hs8uu1vv3b20" path="res://Assets/Assets/Images/Sprites/Demon/Demon2.png" id="9_ehtjj"]
+[ext_resource type="Texture2D" uid="uid://dx4hf1ux3v1yh" path="res://Assets/Assets/Images/Sprites/Dino/Dino1.png" id="10_6gju2"]
+[ext_resource type="Texture2D" uid="uid://ck68ocfvfqjm1" path="res://Assets/Assets/Images/Sprites/Dino/Dino2.png" id="11_ulr8v"]
+[ext_resource type="Texture2D" uid="uid://dyphegbc1h3dt" path="res://Assets/Assets/Images/Sprites/Dino/Dino3.png" id="12_eif5c"]
+[ext_resource type="Texture2D" uid="uid://buhmau2isqion" path="res://Assets/Assets/Images/Sprites/Dino/Dino4.png" id="13_o6fuq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4j5tn"]
+size = Vector2(11, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xptto"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bl0y7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3upu4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_aph1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_w8dj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_d6nmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bqfi5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_onelq")
+}],
+"loop": true,
+"name": &"blob",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_86yvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ehtjj")
+}],
+"loop": true,
+"name": &"demon",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_6gju2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ulr8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_eif5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_o6fuq")
+}],
+"loop": true,
+"name": &"dino",
+"speed": 2.0
+}]
+
+[node name="Mob" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_4j5tn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xptto")
+animation = &"blob"
+frame = 1
+frame_progress = 0.271039
