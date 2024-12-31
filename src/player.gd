@@ -1,5 +1,6 @@
 extends Area2D
 
+signal game_over
 var entered_mob
 var walk
 var mob_in_area

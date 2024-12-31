@@ -88,8 +88,7 @@ shape = SubResource("RectangleShape2D_4j5tn")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_xptto")
 animation = &"dino"
-frame = 1
-frame_progress = 0.400372
+frame_progress = 0.231899
 
 [node name="DinoCollision" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, 0.5)

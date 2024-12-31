@@ -46,7 +46,7 @@ script = ExtResource("1_cwkgd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_naugv")
-animation = &"kill_ghost"
+animation = &"walk"
 
 [node name="BodyCollision" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)

@@ -30,3 +30,9 @@ func _on_mob_spawner_timer_timeout() -> void:
 	# Add child
 	add_child(mob_instance)
 	$MobSpawnerTimer.start()
+
+
+func _on_player_hit(area: Area2D) -> void:
+	if area != $Player.get_node("Lightarea"):
+		self.queue_free()
+		print(area)
