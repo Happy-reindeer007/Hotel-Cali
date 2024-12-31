@@ -58,3 +58,6 @@ shape = SubResource("RectangleShape2D_bwt5x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lightarea"]
 shape = SubResource("CircleShape2D_l45wm")
+
+[connection signal="area_entered" from="Lightarea" to="." method="_on_lightarea_area_entered"]
+[connection signal="area_exited" from="Lightarea" to="." method="_on_lightarea_area_exited"]
