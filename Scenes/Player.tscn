@@ -53,11 +53,18 @@ position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_bwt5x")
 
 [node name="KillCooldown" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
 
 [node name="Lightarea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lightarea"]
 shape = SubResource("CircleShape2D_l45wm")
 
+[node name="AnimationTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="KillCooldown" to="." method="_on_kill_cooldown_timeout"]
 [connection signal="area_entered" from="Lightarea" to="." method="_on_lightarea_area_entered"]
 [connection signal="area_exited" from="Lightarea" to="." method="_on_lightarea_area_exited"]
+[connection signal="timeout" from="AnimationTimer" to="." method="_on_animation_timer_timeout"]
