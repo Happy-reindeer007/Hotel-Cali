@@ -1,6 +1,8 @@
 extends Area2D
 
+var entered_mob
 var walk
+var mob_in_area
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,13 +16,16 @@ func _process(delta: float) -> void:
 			$AnimationTimer.start()
 			$AnimatedSprite2D.play("kill_ghost")
 			walk = false
+			if mob_in_area:
+				entered_mob.queue_free()
 	if walk:
 		position.x += 0.05
 
 
 func _on_lightarea_area_entered(area: Area2D) -> void:
 	if area != self:
-		area.queue_free()
+		mob_in_area = true
+		entered_mob = area
 
 func _on_animation_timer_timeout() -> void:
 	walk = true
