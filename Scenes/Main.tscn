@@ -34,4 +34,5 @@ autostart = true
 color = Color(0.0918888, 0.119481, 0.23811, 1)
 
 [connection signal="area_entered" from="Player" to="." method="_on_player_hit"]
+[connection signal="ghost_killed" from="Player" to="." method="_on_player_ghost_killed"]
 [connection signal="timeout" from="MobSpawnerTimer" to="." method="_on_mob_spawner_timer_timeout"]
